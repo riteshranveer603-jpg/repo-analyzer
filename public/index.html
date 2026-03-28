@@ -1,0 +1,337 @@
+<!doctype html>
+<html lang="en" class="dark">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Repo Intel | Pre-cognitive Codebase Analysis</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            futuristic: {
+              900: '#0B0F19', // Deep dark blue/black
+              800: '#111827',
+              700: '#1F2937',
+              600: '#374151',
+              neon: '#3b82f6', // Bright neon blue
+              accent: '#8b5cf6', // Purple neon accent
+              border: 'rgba(255, 255, 255, 0.08)'
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+            mono: ['Fira Code', 'ui-monospace', 'SFMono-Regular', 'monospace'],
+          },
+          animation: {
+            'fade-in': 'fadeIn 0.5s ease-out',
+            'slide-up': 'slideUp 0.5s ease-out forwards',
+          },
+          keyframes: {
+            fadeIn: {
+              '0%': { opacity: '0' },
+              '100%': { opacity: '1' },
+            },
+            slideUp: {
+              '0%': { opacity: '0', transform: 'translateY(10px)' },
+              '100%': { opacity: '1', transform: 'translateY(0)' },
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style type="text/tailwindcss">
+    @layer utilities {
+      .glass-panel {
+        @apply bg-futuristic-800/60 backdrop-blur-md border border-futuristic-border shadow-[0_8px_32px_0_rgba(0,0,0,0.36)] rounded-2xl;
+      }
+      .glass-card {
+        @apply bg-futuristic-800/40 backdrop-blur-sm border border-futuristic-border/60 hover:border-futuristic-neon/50 hover:bg-futuristic-800/60 transition-all duration-300 rounded-xl shadow-lg hover:shadow-futuristic-neon/10;
+      }
+      .text-glow {
+        text-shadow: 0 0 10px rgba(59, 130, 246, 0.5);
+      }
+    }
+  </style>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+
+<body
+  class="bg-futuristic-900 text-gray-200 font-sans min-h-screen relative overflow-x-hidden selection:bg-futuristic-neon/30 selection:text-white pb-12">
+
+  <!-- Abstract Glowing Background Elements -->
+  <div
+    class="fixed top-[-10%] left-[-10%] w-[40%] h-[40%] rounded-full bg-futuristic-neon/10 blur-[120px] pointer-events-none animate-pulse-glow">
+  </div>
+  <div
+    class="fixed bottom-[-10%] right-[-10%] w-[50%] h-[50%] rounded-full bg-futuristic-accent/10 blur-[150px] pointer-events-none animate-pulse-glow"
+    style="animation-delay: 2s;"></div>
+
+  <!-- Navbar -->
+  <nav
+    class="fixed top-0 w-full z-50 glass-panel !rounded-none !border-t-0 !border-l-0 !border-r-0 border-b-futuristic-border/50 bg-futuristic-900/70">
+    <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+      <div class="flex items-center gap-3 cursor-pointer group">
+        <div
+          class="w-8 h-8 rounded-lg bg-gradient-to-br from-futuristic-neon to-futuristic-accent flex items-center justify-center p-[1px] group-hover:shadow-[0_0_15px_rgba(59,130,246,0.5)] transition-shadow">
+          <div class="w-full h-full bg-futuristic-900 rounded-[7px] flex items-center justify-center">
+            <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+            </svg>
+          </div>
+        </div>
+        <span class="font-bold text-lg tracking-wide text-white group-hover:text-glow transition-all">Repo Intel</span>
+      </div>
+      <div class="hidden md:flex items-center gap-8 text-sm font-medium text-gray-400">
+        <a href="#" class="hover:text-white transition-colors">Features</a>
+        <a href="#" class="hover:text-white transition-colors">Documentation</a>
+        <a href="#" class="hover:text-white transition-colors">API</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="relative z-10 pt-32 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center">
+
+    <!-- Hero Section -->
+    <section class="text-center md:col-span-12 max-w-3xl mx-auto mb-12 animate-fade-in">
+      <div
+        class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-futuristic-accent/30 bg-futuristic-accent/10 text-futuristic-accent text-xs font-semibold tracking-wider uppercase mb-6 mx-auto">
+        <span class="w-2 h-2 rounded-full bg-futuristic-accent animate-pulse"></span>
+        AI Codebase Intelligence Agent
+      </div>
+      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white leading-tight mb-6">
+        Understand a repo before you <span
+          class="text-transparent bg-clip-text bg-gradient-to-r from-futuristic-neon to-futuristic-accent">read every
+          file.</span>
+      </h1>
+      <p class="text-lg text-gray-400 max-w-2xl mx-auto leading-relaxed">
+        Generate comprehensive folder summaries, extract execution flows, and visualize dependency graphs in seconds
+        using advanced AI heuristics.
+      </p>
+    </section>
+
+    <!-- Main Analyzer Area -->
+    <section class="w-full max-w-4xl mx-auto animate-slide-up" style="animation-delay: 0.1s;">
+      <div class="glass-panel p-6 sm:p-8">
+
+        <form id="analyze-form" class="analyze-form flex flex-col gap-4">
+          <label for="repoUrl" class="text-sm font-semibold text-gray-300 uppercase tracking-wide">Public GitHub
+            Repository URL</label>
+          <div class="flex flex-col sm:flex-row gap-3">
+            <div class="relative flex-grow group">
+              <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+                <svg class="h-5 w-5 text-gray-500 group-focus-within:text-futuristic-neon transition-colors" fill="none"
+                  viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
+                </svg>
+              </div>
+              <input id="repoUrl" name="repoUrl" type="url" placeholder="https://github.com/owner/repo" required
+                class="w-full pl-11 pr-4 py-3.5 bg-futuristic-900/50 border border-futuristic-border rounded-xl text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-futuristic-neon/50 focus:border-transparent transition-all shadow-inner" />
+            </div>
+            <button id="submit-btn" type="submit"
+              class="px-8 py-3.5 bg-gradient-to-r from-futuristic-neon to-blue-600 hover:from-blue-500 hover:to-blue-400 text-white font-medium rounded-xl shadow-[0_0_20px_rgba(59,130,246,0.4)] hover:shadow-[0_0_25px_rgba(59,130,246,0.6)] transform hover:-translate-y-0.5 transition-all whitespace-nowrap disabled:opacity-50 disabled:cursor-not-allowed">
+              <span id="submit-text">Initialize Scan</span>
+            </button>
+          </div>
+        </form>
+
+        <div class="flex flex-row items-center justify-between mt-6 pt-6 border-t border-futuristic-border/50">
+          <p id="status" class="status text-sm text-gray-400 font-mono flex items-center gap-2">
+            <span class="w-1.5 h-1.5 rounded-full bg-green-500"></span> Ready for target selection.
+          </p>
+          <div class="toolbar flex gap-3">
+            <button id="history-toggle" type="button"
+              class="text-xs px-3 py-1.5 rounded bg-futuristic-700/50 text-gray-300 hover:text-white hover:bg-futuristic-600 transition-colors border border-transparent hover:border-futuristic-border flex items-center gap-1.5">
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+              History
+            </button>
+            <button id="history-clear" type="button"
+              class="text-xs px-3 py-1.5 rounded bg-red-500/10 text-red-400 hover:bg-red-500/20 hover:text-red-300 transition-colors border border-transparent hover:border-red-500/30 flex items-center gap-1.5">
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16">
+                </path>
+              </svg>
+              Clear
+            </button>
+          </div>
+        </div>
+
+        <section id="history-panel"
+          class="history-panel hidden mt-6 pt-6 border-t border-futuristic-border/50 animate-fade-in">
+          <h2 class="text-sm font-semibold text-gray-300 mb-4 px-1">Recent Local Targets</h2>
+          <div id="history-list" class="history-list max-h-60 overflow-y-auto custom-scrollbar pr-2"></div>
+        </section>
+
+      </div>
+    </section>
+
+    <!-- Results Display Area -->
+    <section id="results" class="results hidden w-full mt-12 animate-slide-up">
+      <div class="flex items-center justify-between mb-8 ps-2 pe-2">
+        <h2 class="text-2xl font-bold text-white flex items-center gap-3">
+          <svg class="w-6 h-6 text-futuristic-neon" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+          </svg>
+          Intelligence Report
+        </h2>
+        <div class="results-actions">
+          <button id="download-pdf" type="button"
+            class="px-4 py-2 bg-futuristic-800 border border-futuristic-border text-white text-sm font-medium rounded-lg hover:bg-futuristic-700 hover:border-futuristic-neon/50 transition-all flex items-center gap-2">
+            <svg class="w-4 h-4 text-futuristic-neon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+            </svg>
+            Export PDF
+          </button>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        <!-- Repo Summary -->
+        <article class="glass-card flex flex-col p-5 md:col-span-2 lg:col-span-1">
+          <div class="flex items-center gap-2 mb-4 border-b border-futuristic-border/50 pb-3">
+            <div class="w-8 h-8 rounded bg-blue-500/20 flex items-center justify-center text-blue-400">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+            </div>
+            <h2 class="font-semibold text-lg text-white">Repository Overview</h2>
+          </div>
+          <pre id="repo-summary"
+            class="text-sm text-gray-300 font-sans flex-grow overflow-y-auto custom-scrollbar max-h-64"></pre>
+        </article>
+
+        <!-- Entry Points -->
+        <article class="glass-card flex flex-col p-5">
+          <div class="flex items-center gap-2 mb-4 border-b border-futuristic-border/50 pb-3">
+            <div class="w-8 h-8 rounded bg-green-500/20 flex items-center justify-center text-green-400">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M5 19a2 2 0 01-2-2V7a2 2 0 012-2h4l2 2h4a2 2 0 012 2v1M5 19h14a2 2 0 002-2v-5a2 2 0 00-2-2H9a2 2 0 00-2 2v5a2 2 0 01-2 2z">
+                </path>
+              </svg>
+            </div>
+            <h2 class="font-semibold text-lg text-white">Entry Points</h2>
+          </div>
+          <pre id="entry-points"
+            class="text-sm text-gray-300 font-mono flex-grow overflow-y-auto custom-scrollbar max-h-64"></pre>
+        </article>
+
+        <!-- Critical Files -->
+        <article class="glass-card flex flex-col p-5">
+          <div class="flex items-center gap-2 mb-4 border-b border-futuristic-border/50 pb-3">
+            <div class="w-8 h-8 rounded bg-amber-500/20 flex items-center justify-center text-amber-400">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z">
+                </path>
+              </svg>
+            </div>
+            <h2 class="font-semibold text-lg text-white">Critical Files</h2>
+          </div>
+          <pre id="critical-files"
+            class="text-sm text-gray-300 font-mono flex-grow overflow-y-auto custom-scrollbar max-h-64"></pre>
+        </article>
+
+        <!-- Folder Summary -->
+        <article class="glass-card flex flex-col p-5 md:col-span-2 lg:col-span-3">
+          <div class="flex items-center gap-2 mb-4 border-b border-futuristic-border/50 pb-3">
+            <div class="w-8 h-8 rounded bg-purple-500/20 flex items-center justify-center text-purple-400">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z">
+                </path>
+              </svg>
+            </div>
+            <h2 class="font-semibold text-lg text-white">Architecture & Folder Structure</h2>
+          </div>
+          <pre id="folder-summary"
+            class="text-sm text-gray-300 font-mono max-h-80 overflow-y-auto custom-scrollbar"></pre>
+        </article>
+
+        <!-- Execution Flows -->
+        <article class="glass-card flex flex-col p-5 md:col-span-1 lg:col-span-2">
+          <div class="flex items-center gap-2 mb-4 border-b border-futuristic-border/50 pb-3">
+            <div class="w-8 h-8 rounded bg-cyan-500/20 flex items-center justify-center text-cyan-400">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z">
+                </path>
+              </svg>
+            </div>
+            <h2 class="font-semibold text-lg text-white">Execution Flows</h2>
+          </div>
+          <pre id="execution-flows"
+            class="text-sm text-gray-300 font-sans whitespace-pre-wrap max-h-80 overflow-y-auto custom-scrollbar"></pre>
+        </article>
+
+        <!-- Request Flows -->
+        <article class="glass-card flex flex-col p-5">
+          <div class="flex items-center gap-2 mb-4 border-b border-futuristic-border/50 pb-3">
+            <div class="w-8 h-8 rounded bg-rose-500/20 flex items-center justify-center text-rose-400">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"></path>
+              </svg>
+            </div>
+            <h2 class="font-semibold text-lg text-white">Request Flows</h2>
+          </div>
+          <pre id="request-flows"
+            class="text-sm text-gray-300 font-sans whitespace-pre-wrap max-h-80 overflow-y-auto custom-scrollbar"></pre>
+        </article>
+
+        <!-- Dependency Graph -->
+        <article class="glass-card flex flex-col p-5 md:col-span-2 lg:col-span-2">
+          <div class="flex items-center gap-2 mb-4 border-b border-futuristic-border/50 pb-3">
+            <div class="w-8 h-8 rounded bg-indigo-500/20 flex items-center justify-center text-indigo-400">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M7 16V4m0 0L3 8m4-4l4 4m6 0v12m0 0l4-4m-4 4l-4-4"></path>
+              </svg>
+            </div>
+            <h2 class="font-semibold text-lg text-white">Network Topology (Dependencies)</h2>
+          </div>
+          <pre id="dependency-graph"
+            class="text-sm text-gray-300 font-mono whitespace-pre-wrap max-h-80 overflow-y-auto custom-scrollbar"></pre>
+        </article>
+
+        <!-- Warnings -->
+        <article class="glass-card flex flex-col p-5">
+          <div class="flex items-center gap-2 mb-4 border-b border-futuristic-border/50 pb-3">
+            <div class="w-8 h-8 rounded bg-red-500/20 flex items-center justify-center text-red-400">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+            </div>
+            <h2 class="font-semibold text-lg text-white">Alerts & Exceptions</h2>
+          </div>
+          <pre id="warnings"
+            class="text-sm text-red-300/80 font-mono whitespace-pre-wrap max-h-80 overflow-y-auto custom-scrollbar"></pre>
+        </article>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="/app.js" defer></script>
+</body>
+
+</html>
