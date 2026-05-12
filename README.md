@@ -1,6 +1,6 @@
 # 🔍 GitHub Repo Analyzer
 
-A simple and powerful tool to analyze GitHub repositories and extract useful insights like stars, forks, contributors, languages, commits, and repository statistics. Built for developers who want quick repo analytics without manually checking GitHub pages.
+A simple and powerful tool to analyze GitHub repositories and extract useful insights like stars, forks, contributors, languages, commits, and repository statistics. Built for developers who want quick repo analytics without manually checking GitHub pages .
 
 ---
 
