@@ -14,6 +14,7 @@ A simple and powerful tool to analyze GitHub repositories and extract useful ins
 - ⚡ Fast and lightweight
 - 🌐 Easy to use interface/API
 
+
 ---
 
 ## 🛠️ Tech Stack
